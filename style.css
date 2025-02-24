@@ -1,3 +1,6 @@
+weather app css code-
+
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +16,13 @@
 body {
     background-color: #222;
 
+}
+
+.weathertype{
+    margin-top: 10px;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    letter-spacing: 2px;
 }
 
 .search {
@@ -64,9 +74,16 @@ body {
     color: #ebfffc;
 }
 
+.localtime{
+    margin-top: 10px;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    letter-spacing: 2px;
+}
+
 .weatherimg {
     margin-top: 20px;
-    width: 170px;
+    width: 70px;
 }
 
 .weathclass h1 {
@@ -107,3 +124,5 @@ body {
 font-size: 28px;
 margin-top: -6px;
 }
+
+
