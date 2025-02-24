@@ -8,7 +8,7 @@
 .title {
     color: rgb(119, 228, 184);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 50px;  /* Reduced for mobile */
+    font-size: 50px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -18,7 +18,7 @@
     color: aliceblue;
     font-weight: lighter;
     font-family: cursive;
-    font-size: 24px; /* Reduced for mobile */
+    font-size: 25px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -28,26 +28,20 @@ body {
     background-color: #222;
 }
 
-/* Center the card and make it responsive */
-.card {
-    height: auto;
-    max-width: 400px;
-    width: 90%;
-    margin: 50px auto;  /* Reduced margin for better fit */
-    background: linear-gradient(135deg, #00feba, #5b548a);
-    border-radius: 20px;
-    padding: 30px;
+.weathertype, .localtime {
+    margin-top: 10px;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    letter-spacing: 2px;
     text-align: center;
-    color: #ebfffc;
 }
 
-/* Input and search button improvements */
 .search {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;  /* Ensure proper wrapping on small screens */
+    justify-content: space-between;
+    padding: 10px;
 }
 
 #input {
@@ -55,13 +49,11 @@ body {
     outline: 0;
     background: #ebfffc;
     color: #555;
-    padding: 1.5vh 2vh;
-    margin-bottom: 10px;
-    font-size: 16px; /* Reduce font size for smaller screens */
+    padding: 10px;
+    font-size: 16px;
     flex: 1;
     border-radius: 15px;
     height: 50px;
-    max-width: 70%;
 }
 
 #btn1 {
@@ -72,77 +64,70 @@ body {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #btn1 img {
-    width: 20px;
+    width: 16px;
 }
 
-.weathertype{
-    margin-top: 10px;
-    font-weight: lighter;
-    font-stretch: ultra-expanded;
-    letter-spacing: 2px;
+.card {
+    height: auto;
+    max-width: 400px;
+    width: 90%;
+    margin: 50px auto;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    color: #ebfffc;
 }
 
-.localtime{
-    margin-top: 10px;
-    font-weight: lighter;
-    font-stretch: ultra-expanded;
-    letter-spacing: 2px;
-}
-
-
-/* Weather details */
 .weatherimg {
-    margin-top: 15px;
-    width: 60px; /* Adjusted for better fit */
+    margin-top: 20px;
+    width: 80px;
 }
 
 .weathclass h1 {
-    font-size: 50px; /* Reduced for better fit */
+    font-size: 60px;
     font-weight: 500;
 }
 
 .weathclass h2 {
-    font-size: 30px; /* Reduced for better fit */
+    font-size: 35px;
     font-weight: 400;
     margin-top: 10px;
 }
 
-/* Adjust details section */
+/* Fix for Humidity and Wind crunching issue */
 .details {
     margin-top: 30px;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Allows elements to move below if space is tight */
 }
 
 .col {
     display: flex;
     align-items: center;
     text-align: left;
+    flex: 1; /* Distributes space evenly */
+    min-width: 120px; /* Ensures elements don’t shrink too much */
 }
 
 .col img {
-    margin-left: 5px;
-    width: 40px; /* Adjust icon size */
-    margin-right: 10px;
+    width: 40px;
+    margin-right: 8px;
 }
 
-/* Adjust font sizes */
 .humidity, .wind {
-    font-size: 22px;
+    font-size: 24px;
     margin-top: -6px;
 }
 
-/* Make the page responsive */
-@media (max-width: 768px) {
+/* Responsive for smaller screens */
+@media (max-width: 480px) {
     .title {
         font-size: 40px;
     }
@@ -151,85 +136,22 @@ body {
         font-size: 20px;
     }
 
-    .card {
-        width: 95%;
-        padding: 20px;
-    }
-
     .weathclass h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
 
     .weathclass h2 {
-        font-size: 25px;
-    }
-
-    #input {
-        font-size: 14px;
-        max-width: 85%;
-    }
-
-    #btn1 {
-        width: 45px;
-        height: 45px;
+        font-size: 30px;
     }
 
     .details {
-        padding: 0 10px;
         flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Adds spacing between elements */
     }
 
     .col {
         justify-content: center;
-        width: 100%;
-    }
-
-    .col img {
-        width: 35px;
+        text-align: center;
     }
 }
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 30px;
-    }
-
-    .title2 {
-        font-size: 18px;
-    }
-
-    .card {
-        padding: 15px;
-    }
-
-    .weathclass h1 {
-        font-size: 30px;
-    }
-
-    .weathclass h2 {
-        font-size: 20px;
-    }
-
-    #input {
-        font-size: 12px;
-        padding: 1vh 1.5vh;
-    }
-
-    #btn1 {
-        width: 40px;
-        height: 40px;
-    }
-
-    .details {
-        padding: 0 5px;
-    }
-
-    .col img {
-        width: 30px;
-    }
-
-    .humidity, .wind {
-        font-size: 18px;
-    }
-}
-
