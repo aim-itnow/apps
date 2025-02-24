@@ -25,6 +25,20 @@ body {
     letter-spacing: 2px;
 }
 
+.localtime{
+    margin-top: 10px;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    letter-spacing: 2px;
+}
+
+.weathertype{
+    margin-top: 10px;
+    font-weight: lighter;
+    font-stretch: ultra-expanded;
+    letter-spacing: 2px;
+}
+
 .search {
     width: 100%;
     display: flex;
